@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <h2>FORM DATA MAHASISWA</h2>
+            <label for="nim">NIM</label>
+            <input type="text" name="nim" id="nim" class="form-control" [(ngModel)]="nim">
+            <label for="nama">Nama</label>
+            <input type="text" name="nama" id="nama" class="form-control" [(ngModel)]="nama">
+            <label for="kelas">Kelas</label>
+            <input type="text" name="kelas" id="kelas" class="form-control" [(ngModel)]="kelas">
+            <br>
+            <button class="btn btn-primary" (click)="tambahMhs()">Tambah Mahasiswa</button>
+        </div>
+        <div class="col-md-6">
+            <h2>DATA MAHASISWA</h2>
+        <div class="card" style="width: 18rem" *ngFor="let mhs of daftarMhs">
+            <div class="card-header">{{mhs.nama}}</div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">{{mhs.nim}}</li>
+                <li class="list-group-item">{{mhs.kelas}}</li>
+            </ul>
+            </div>
+        </div>
+    </div>
+</div>
